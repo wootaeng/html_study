@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_quiz.html</title>
+</head>
+<body>
+    <button onclick="increase();" id="countBtn">0</button>
+    
+    <script>
+        /* 
+        var count=0;
+        function increase(){
+            count=cont+1;
+        }
+        */
+        //버튼을 누를때마다 button 의 innertxet 가 1씩 증가되게 해보세요
+        //페이지가 로딩되는 시점에 count 값을 0으로 초기화
+        var count=0; 
+        //함수가 호출될 때마다
+        function increase(){
+            //count 값을 1 증가시키고
+            count=count+1;
+            //버튼의 innertext 에 count 값을 출력하기
+            document.querySelector("#countBtn").innerText=count;
+        }
+    
+    /*
+    function increase(){
+            var count=0;
+            count=count+1;
+            document.querySelector("#countBtn").innerText=count;
+        } 이렇게 함수가 짜여지면 함수가 가동될때 0,1 만 반복이다. 함수 안에 변수값은
+        함수에서만 적용되기 때문이다 */
+    </script>
+</body>
+</html>
