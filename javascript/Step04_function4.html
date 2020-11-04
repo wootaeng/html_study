@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_function4.html</title>
+</head>
+<body>
+    <script>
+        //함수를 호출하면 반드시 어떤값을 해당위치로 return 해준다
+        function a(){
+            console.log("a() 함수 호출됨"); //undefined undefined도 값이기에 리턴해준다
+        }
+
+        function b(){
+            console.log("b() 함수 호출됨"); //10
+            return 10;
+        }
+
+        function c(){
+            console.log("c() 함수 호출됨"); //kim
+            return "kim";
+        }
+
+        function d(){
+            console.log("d() 함수 호출됨");
+            let obj={num:1,name:"김구라",addr:"노량진"};
+            return obj;
+        }
+    </script>
+</body>
+</html>
