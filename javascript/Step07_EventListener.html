@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_EventListenner.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>EventListener 테스트</h1>
+    <button onclick="clicked();">눌러보셈</button> <!--기존방식-->
+    <button id="myBtn">눌러보셈2</button>
+    <div class="box" id="myDiv"></div>
+    <div class="box"></div>
+    <script>
+        function clicked(){
+            alert("버튼을 눌렀네요?");
+        } // 이것은 global area 에 입력이 되는 것
+
+        document.querySelector("#myBtn").addEventListener("click", function(){
+            alert("버튼을 눌렀네요? 2");
+        }); 
+        // 이것은 global area에 페이지로딩시 자동 세팅되는 것이 아니라 event 발생시에만 작동
+        // 실무에선 이 방법을 사용
+        // event name은 js 상에 정해진 name 만 가능
+      //id가 myDiv 인 요소에 "click" 이벤트가 일어나면 호출되는 함수 등록
+      document.querySelector("").addEventListener("click",function(){
+            //document.querySelector("#myDiv").innerText="clicked!";
+            this.innerText="clicked!";
+      });
+
+    </script>
+</body>
+</html>

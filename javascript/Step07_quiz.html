@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_quiz.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <h1>EventListener 테스트중..</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        /*[hint]
+        1. for 
+        2. document.querySelctorAll("div")[i].addEventListener();
+        3. this.innerText=clicked";
+        */
+        //div 갯수를 세는 변수를 만들어서 그 변수를 작동시키면 된다.
+        let divs=document.querySelectorAll("div");
+        for(i=0; i<divs.length; i++)
+            divs[i].addEventListener("click",function(){
+            this.innerText="clicked";
+        });
+        
+        /*
+        for(let i=o; i<20; i++){
+            document.querySelectorAll("div")[i].addEventListener("click",function(){
+                this.innerText="clicked";
+            });
+        };    
+        */  
+
+        /* local area 에서 사용하는 방법
+        (function(){
+            let divs=document.querySelectorAll("div");
+            for(i=0; i<divs.length; i++)
+                divs[i].addEventListener("click",function(){
+                this.innerText="clicked";
+        })();
+        */ 
+    </script>
+</body>
+</html>
