@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_operator2.html</title>
+</head>
+<body>
+    <h1>논리(boolean) 연산자 테스트중</h1>
+    <script>
+        /* 
+            [아침에 눈을 떳다]
+
+            일어날 시간인지? false
+            화장실이 급하다? true
+
+            기상 여부 : 두값이 어느 하나만 true 이면 일어난다.
+
+            [점심을 먹어야한다]
+
+            점심 시간인지? treu
+            배가 고픈지? true
+            
+            점심을 먹을지 여부 :  둘다 true 여야 먹는다.
+
+            [여자가 보는 남자의 이상형]
+
+            1. 잘생겼는지 여부
+            2. 키큰지 여부
+         */   
+        let isHansome=true;
+        let isTall=false;
+
+        if( isHansome && isTall){ //a&&b 조건 두개다 만족할떄 and연산자
+            alert("사귈꺼야");
+        } 
+
+        if (isHansome ||isTall){ //a||b 조건 중 하나만 true면 true or연산자
+            alert("사겨?");
+        }
+        
+        /*
+            2. 논리(boolean) 연산자
+            - 논리값(true, false) 를 연산해주는 연산자.
+
+            && => and 연산 ("그리고" 로 읽는다)
+            || => or 연산  ("또는" 으로 읽는다)
+            !  => not 연산 ("아니면" 으로 읽는다)
+        */
+        //연산에 참여하는 boolean 값이 다 만족해야 true
+        var result1=false&&false; //false
+        var result2=false&&true; //false
+        var result3=true&&false; //false
+        var result4=true&&true; //true
+
+        //연산에 참여하는 boolean 값이 어느 하나만 true  면 결과는 true 이다.
+        var result5=false||false; //false
+        var result6=false||true; //true
+        var result7=true||false; //true
+        var result8=true||true; //true
+
+        //boolean 값을 반전시킨다. 
+        var result9=!true;  //false
+        var result10=!false; //true
+
+
+    </script>
+</body>
+</html>
