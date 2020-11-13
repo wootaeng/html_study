@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello.html</title>
+    <!-- 외부 (external) ccs 로딩하기 -->
+    <link rel="stylesheet" href="./css/custom.css"> <!--.css하면서 폴더검색가능. -->
+    <style>
+        /* 여기는 internal(내부) css영역 */
+        div{
+        /* css attribute: value;  가 문법  css attribute 는 각 구역의 4개 방향을 지칭 총 12개*/
+            margin-top:100px;
+            color:#ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div>css 를 배워 보아요~</div>
+    <!-- style=" 여기는 inline css 영역 "-->
+    <div style="background-color: yellow;">css 를 배워 보아요~</div> 
+    <!--개별css적용도 가능-->
+    <!--배경색은 magin에는 칠해지자않고 pading에 칠해진다-->
+    <div>css 를 배워 보아요~</div>
+    <p>p1 입니다.</p>
+</body>
+</html>

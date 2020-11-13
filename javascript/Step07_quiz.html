@@ -44,7 +44,7 @@
         */
         //div 갯수를 세는 변수를 만들어서 그 변수를 작동시키면 된다.
         let divs=document.querySelectorAll("div");
-        for(i=0; i<divs.length; i++)
+        for(let i=0; i<divs.length; i++)
             divs[i].addEventListener("click",function(){
             this.innerText="clicked";
         });
